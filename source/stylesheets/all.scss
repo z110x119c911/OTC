@@ -1,0 +1,126 @@
+@import "functions";
+@import "helpers/variables";
+@import "mixins";
+
+@import "aos";
+@import "bootstrap";
+
+$fz48: 48px;
+$fz24: 24px;
+$fz12: 12px;
+$blue: #3498db;
+h1{
+    font-size: $fz48;
+}
+p{
+    margin-bottom: 0;
+}
+.header_p_fz{
+    font-size: $fz24;
+}
+.font_Raleway{
+    font-family: 'Raleway', sans-serif;
+}
+
+//css delay
+:root {
+  --animate-duration: 2000ms;
+  --animate-delay: 3s;
+}
+//scrollTop
+.scrollTop{
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 30px;
+    position: fixed;
+    bottom: -40px;
+    right: 40px;
+    transition: all 0.5s ease;
+    background-color: #404040;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.scrollTop.show { bottom: 20px; }
+
+.scrollTop:hover {
+  background-color: #3498db;
+  color: #FFFFFF;
+}
+//nav
+.nav{
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top:0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  background: #fff;
+}
+.nav-item > a {
+    margin-right: 20px;
+}
+//title setting
+.section_title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section_title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  color: #222222;
+}
+.section_title h2::before, .section_title h2::after {
+  content: '';
+  width: 50px;
+  height: 2px;
+  background: $blue;
+  display: inline-block;
+}
+.section_title h2::before {
+  margin: 0 15px 10px 0;
+}
+
+.section_title h2::after {
+  margin: 0 0 10px 15px;
+}
+
+
+//service_card
+.service_card{
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.card{
+    height: 220px;
+}
+.card > p{
+    padding: 10px 0;
+    background: $blue;
+}
+.card > div > h5{
+    text-align: center;
+}
+//合作
+.dealers_img > div > img{
+    width: 50%;
+    padding: 10px 0;
+}
+.dealers_img > div{
+    text-align: center;
+    align-self: center;
+}
+//footer
+footer{
+    padding: 30px 0;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+}
+footer > p {
+    color: #545454;
+    font-size: $fz12;
+}
